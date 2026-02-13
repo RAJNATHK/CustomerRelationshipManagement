@@ -13,7 +13,6 @@ import java.sql.Date;
 
 public class CrmDAO {
 
-    // ===================== CREATE RECORD =====================
 
     public String createRecord(CrmBean bean) {
 
@@ -48,7 +47,6 @@ public class CrmDAO {
         }
     }
 
-    // ===================== FETCH SINGLE RECORD =====================
     public CrmBean fetchRecord(String name, java.sql.Date date) {
 
         CrmBean bean = null;
@@ -91,13 +89,9 @@ public class CrmDAO {
 
 
 
-    // ===================== CHECK RECORD EXISTS =====================
-
     public boolean recordExists(String name, java.sql.Date date) {
         return fetchRecord(name, date) != null;
     }
-
-    // ===================== FETCH ALL RECORDS =====================
 
     public List<CrmBean> fetchAllRecords() {
 
@@ -134,7 +128,6 @@ public class CrmDAO {
     }
 
 
-    // ===================== GENERATE RECORD ID =====================
 
     public String generateRecordID(String name, java.util.Date date) {
 
